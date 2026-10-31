@@ -3,38 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mawa | Luxury Web Designer</title>
-  <meta name="description" content="Mawa creates premium business websites and luxury landing pages for brands that want to grow online." />
+  <title>Mawa | Professional Web Designer</title>
+  <meta name="description" content="Mawa designs premium, modern, and conversion-focused websites for businesses, startups, and professionals." />
   <style>
     :root{
-      --bg:#070b14;
-      --bg2:#0d1526;
-      --panel:#101b2d;
-      --panel-2:#16253e;
-      --primary:#8aa9ff;
-      --secondary:#7ef0d1;
-      --gold:#e8d8a5;
-      --text:#f5f7ff;
-      --muted:#bfd0ee;
+      --bg:#0b1220;
+      --bg2:#101d31;
+      --panel:#12233c;
+      --panel2:#162d49;
+      --primary:#1d4ed8;
+      --secondary:#60a5fa;
+      --text:#edf6ff;
+      --muted:#c4d5ef;
       --line:rgba(255,255,255,0.08);
-      --shadow:0 30px 80px rgba(0,0,0,0.35);
-      --radius:24px;
+      --shadow:0 22px 60px rgba(0,0,0,0.22);
+      --radius:20px;
     }
 
-    *{ box-sizing:border-box; }
-    html{ scroll-behavior:smooth; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body{
       margin:0;
       font-family: Arial, Helvetica, sans-serif;
       background:
-        radial-gradient(circle at top, rgba(138,169,255,0.18), transparent 25%),
+        radial-gradient(circle at top, rgba(96,165,250,0.16), transparent 28%),
         linear-gradient(180deg, var(--bg), var(--bg2));
       color:var(--text);
       line-height:1.7;
     }
 
-    a{text-decoration:none; color:inherit;}
-    img{ max-width:100%; display:block; }
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+    }
+
     .container{
       width:min(1180px, calc(100% - 32px));
       margin:0 auto;
@@ -43,51 +50,55 @@
     .topbar{
       position:sticky;
       top:0;
-      z-index:100;
-      backdrop-filter:blur(12px);
-      background:rgba(7,11,20,0.72);
+      z-index:20;
+      backdrop-filter: blur(12px);
+      background:rgba(11,18,32,0.8);
       border-bottom:1px solid var(--line);
     }
 
     nav{
+      min-height:74px;
       display:flex;
       justify-content:space-between;
       align-items:center;
-      min-height:80px;
     }
 
     .brand{
-      font-size:1.2rem;
       font-weight:800;
       letter-spacing:0.18em;
+      font-size:1.1rem;
     }
 
     .nav-links{
       display:flex;
       gap:24px;
       color:var(--muted);
-      font-size:0.96rem;
+      font-size:0.95rem;
     }
 
-    .nav-links a:hover{ color:var(--text); }
+    .nav-links a:hover{
+      color:var(--text);
+    }
 
     .btn{
       display:inline-flex;
       align-items:center;
       justify-content:center;
+      padding:14px 22px;
       border-radius:12px;
-      padding:15px 22px;
       border:1px solid rgba(255,255,255,0.12);
-      font-weight:700;
       transition:0.25s ease;
-      white-space:nowrap;
+      font-weight:700;
+      text-align:center;
       cursor:pointer;
     }
 
-    .btn:hover{ transform:translateY(-2px); }
+    .btn:hover{
+      transform:translateY(-2px);
+    }
 
     .btn-primary{
-      background:linear-gradient(135deg, var(--primary), #a58cff);
+      background:linear-gradient(135deg, var(--primary), var(--secondary));
       color:#fff;
       box-shadow:var(--shadow);
     }
@@ -98,113 +109,112 @@
     }
 
     .hero{
-      padding:90px 0 70px;
+      padding:80px 0 50px;
     }
 
     .hero-grid{
       display:grid;
       grid-template-columns:1.15fr 0.85fr;
-      gap:34px;
+      gap:32px;
       align-items:center;
     }
 
     .eyebrow{
       display:inline-flex;
-      padding:10px 16px;
+      padding:9px 14px;
       border-radius:999px;
-      background:rgba(126,165,255,0.12);
-      border:1px solid rgba(126,165,255,0.25);
-      color:var(--secondary);
+      background:rgba(96,165,250,0.12);
+      border:1px solid rgba(96,165,250,0.25);
+      color:#bfe3ff;
       font-weight:700;
-      font-size:0.8rem;
-      margin-bottom:20px;
+      font-size:0.78rem;
+      margin-bottom:18px;
     }
 
     h1{
-      font-size:clamp(2.9rem,5vw,5.3rem);
-      line-height:1.02;
-      letter-spacing:-0.08em;
+      font-size:clamp(2.9rem, 5vw, 5rem);
+      line-height:1.04;
+      letter-spacing:-0.07em;
       margin:0 0 18px;
       font-weight:800;
     }
 
-    .luxury-gradient{
-      background:linear-gradient(135deg, #abc4ff, #86f3d6, #e7d9a9);
+    .gradient{
+      background:linear-gradient(135deg, #d9ecff, #8ec5ff, #93d5ff);
       -webkit-background-clip:text;
       background-clip:text;
       color:transparent;
     }
 
     .lead{
-      max-width:640px;
       font-size:1.08rem;
       color:var(--muted);
-      margin:0 0 28px;
+      max-width:620px;
+      margin:0 0 26px;
     }
 
     .hero-actions{
       display:flex;
       flex-wrap:wrap;
-      gap:16px;
+      gap:12px;
       margin-bottom:28px;
     }
 
-    .stats{
+    .mini-stats{
       display:flex;
       flex-wrap:wrap;
-      gap:28px;
+      gap:24px;
       color:var(--muted);
       font-size:0.95rem;
     }
 
-    .stats strong{
+    .mini-stats strong{
       display:block;
       color:var(--text);
-      font-size:1.25rem;
+      font-size:1.2rem;
       margin-bottom:4px;
     }
 
     .hero-card{
-      background:linear-gradient(180deg, rgba(255,255,255,0.025), rgba(255,255,255,0.04));
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.04));
       border:1px solid var(--line);
-      border-radius:30px;
-      padding:22px;
+      border-radius:28px;
+      padding:20px;
       box-shadow:var(--shadow);
     }
 
     .portrait{
-      height:450px;
+      height:440px;
       border-radius:24px;
       background:
-        linear-gradient(145deg, rgba(138,169,255,0.22), rgba(126,240,209,0.15)),
+        linear-gradient(135deg, rgba(29,78,216,0.32), rgba(96,165,250,0.18)),
         url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80') center/cover no-repeat;
       border:1px solid rgba(255,255,255,0.08);
     }
 
     .badge-row{
+      margin-top:18px;
       display:flex;
       justify-content:space-between;
       align-items:center;
-      gap:12px;
-      margin-top:18px;
-      background:rgba(255,255,255,0.03);
       border:1px solid var(--line);
-      border-radius:18px;
-      padding:14px 16px;
+      border-radius:16px;
+      padding:14px 18px;
+      background:rgba(255,255,255,0.03);
       color:var(--muted);
     }
 
     section{
-      padding:70px 0;
+      padding:68px 0;
     }
 
     .section-head{
-      margin-bottom:30px;
+      margin-bottom:28px;
     }
 
     .section-head h2{
       margin:0 0 12px;
-      font-size:clamp(2.1rem,3vw,3.1rem);
+      font-size:clamp(2rem, 3vw, 3.1rem);
       letter-spacing:-0.06em;
     }
 
@@ -230,7 +240,7 @@
 
     .card h3{
       margin:0 0 12px;
-      font-size:1.2rem;
+      font-size:1.12rem;
     }
 
     .card p{
@@ -252,16 +262,16 @@
       box-shadow:var(--shadow);
     }
 
-    .step .num{
-      display:grid;
-      place-items:center;
+    .num{
       width:42px;
       height:42px;
       border-radius:50%;
-      background:linear-gradient(135deg, var(--primary), #a58cff);
-      color:#fff;
-      font-weight:700;
+      display:grid;
+      place-items:center;
       margin-bottom:14px;
+      background:linear-gradient(135deg, var(--primary), var(--secondary));
+      font-weight:700;
+      color:#fff;
     }
 
     .step h3{
@@ -284,36 +294,36 @@
       background:rgba(255,255,255,0.02);
       border:1px solid var(--line);
       border-radius:24px;
-      padding:30px 24px;
+      padding:28px 24px;
       box-shadow:var(--shadow);
     }
 
     .pricing-card.featured{
-      background:linear-gradient(180deg, rgba(138,169,255,0.10), rgba(255,255,255,0.02));
-      border-color:rgba(138,169,255,0.35);
+      background:linear-gradient(180deg, rgba(29,78,216,0.12), rgba(255,255,255,0.02));
+      border-color:rgba(96,165,250,0.3);
     }
 
     .tag{
       display:inline-block;
       padding:8px 12px;
       border-radius:999px;
-      background:rgba(126,240,209,0.12);
-      border:1px solid rgba(126,240,209,0.2);
-      color:var(--secondary);
+      background:rgba(96,165,250,0.12);
+      border:1px solid rgba(96,165,250,0.24);
+      color:#d8eeff;
+      font-size:0.76rem;
       font-weight:700;
-      font-size:0.74rem;
       margin-bottom:12px;
     }
 
     .pricing-card h3{
       margin:0 0 8px;
-      font-size:1.5rem;
+      font-size:1.35rem;
     }
 
     .price{
-      font-size:2.3rem;
-      letter-spacing:-0.05em;
+      font-size:2.2rem;
       font-weight:800;
+      letter-spacing:-0.05em;
       margin:12px 0 18px;
     }
 
@@ -340,7 +350,7 @@
       content:"✓";
       position:absolute;
       left:0;
-      color:var(--secondary);
+      color:#9ee7bb;
       font-weight:700;
     }
 
@@ -353,7 +363,7 @@
     .project-card{
       background:rgba(255,255,255,0.02);
       border:1px solid var(--line);
-      border-radius:24px;
+      border-radius:22px;
       overflow:hidden;
       box-shadow:var(--shadow);
     }
@@ -361,7 +371,7 @@
     .project-thumb{
       height:220px;
       background:
-        linear-gradient(145deg, rgba(138,169,255,0.26), rgba(126,240,209,0.12)),
+        linear-gradient(145deg, rgba(29,78,216,0.24), rgba(96,165,250,0.12)),
         url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
     }
 
@@ -396,21 +406,21 @@
 
     .cta-box{
       background:
-        linear-gradient(135deg, rgba(138,169,255,0.12), rgba(126,240,209,0.08)),
+        linear-gradient(135deg, rgba(29,78,216,0.15), rgba(96,165,250,0.08)),
         rgba(255,255,255,0.02);
       border:1px solid var(--line);
-      border-radius:30px;
-      padding:36px 30px;
+      border-radius:28px;
+      padding:36px 28px;
       display:flex;
       justify-content:space-between;
       align-items:center;
-      gap:18px;
       flex-wrap:wrap;
+      gap:20px;
     }
 
     .cta-box h2{
       margin:0 0 8px;
-      font-size:clamp(2rem,3vw,2.8rem);
+      font-size:clamp(2rem, 3vw, 2.8rem);
       letter-spacing:-0.05em;
     }
 
@@ -428,31 +438,31 @@
     .contact-form{
       background:rgba(255,255,255,0.02);
       border:1px solid var(--line);
-      border-radius:24px;
+      border-radius:22px;
       padding:22px;
       box-shadow:var(--shadow);
     }
 
     .contact-form input, .contact-form textarea{
       width:100%;
-      margin:10px 0;
-      padding:14px 16px;
       border-radius:12px;
-      background:#0f1a2b;
-      color:var(--text);
+      padding:14px 16px;
       border:1px solid var(--line);
+      background:#0f1c2d;
+      color:var(--text);
+      margin:10px 0;
       font:inherit;
     }
 
     .contact-form textarea{
-      min-height:130px;
+      min-height:120px;
       resize:vertical;
     }
 
     footer{
-      padding:26px 0 40px;
-      text-align:center;
+      padding:24px 0 40px;
       color:var(--muted);
+      text-align:center;
       font-size:0.94rem;
     }
 
@@ -460,8 +470,9 @@
       .hero-grid, .feature-grid, .process-grid, .pricing-grid, .project-grid, .contact-grid{
         grid-template-columns:1fr;
       }
-
-      .nav-links{ display:none; }
+      .nav-links{
+        display:none;
+      }
     }
   </style>
 </head>
@@ -471,13 +482,13 @@
       <nav>
         <div class="brand">MAWA</div>
         <div class="nav-links">
-          <a href="#about">About</a>
           <a href="#services">Services</a>
+          <a href="#process">Process</a>
           <a href="#pricing">Pricing</a>
           <a href="#portfolio">Portfolio</a>
           <a href="#contact">Contact</a>
         </div>
-        <a href="mailto:jhonsmith0080@gmail.com" class="btn btn-primary">Email Me</a>
+        <a class="btn btn-primary" href="#contact">Get a Quote</a>
       </nav>
     </div>
   </header>
@@ -486,23 +497,33 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <div class="eyebrow">Luxury Web Design • Freelance Growth</div>
+          <div class="eyebrow">Professional Web Designer • Freelancer</div>
           <h1>
-            I build <span class="luxury-gradient">premium digital experiences</span> that attract clients.
+            I build <span class="gradient">modern digital experiences</span> that bring more clients.
           </h1>
+
           <p class="lead">
-            I help businesses, founders, and professionals build elegant online presences that look premium, build trust, and convert visitors into real opportunities.
+            I design premium and conversion-focused websites for businesses, startups, and professionals who want to look credible, visible, and easy to trust online.
           </p>
 
           <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary">Hire Me</a>
-            <a href="#portfolio" class="btn btn-secondary">View Portfolio</a>
+            <a class="btn btn-primary" href="#contact">Get a Quote</a>
+            <a class="btn btn-secondary" href="#portfolio">View My Work</a>
           </div>
 
-          <div class="stats">
-            <div><strong>2+</strong>Years of experience</div>
-            <div><strong>15+</strong>Projects delivered</div>
-            <div><strong>100%</strong>Client focus</div>
+          <div class="mini-stats">
+            <div>
+              <strong>2+</strong>
+              Years of work
+            </div>
+            <div>
+              <strong>15+</strong>
+              Projects
+            </div>
+            <div>
+              <strong>100%</strong>
+              Client-focused
+            </div>
           </div>
         </div>
 
@@ -516,81 +537,62 @@
       </div>
     </section>
 
-    <section id="about">
-      <div class="container">
-        <div class="section-head">
-          <h2>Why businesses choose me</h2>
-          <p>A premium website does more than look good — it builds trust, communicates quality, and turns interest into clients.</p>
-        </div>
-
-        <div class="feature-grid">
-          <div class="card">
-            <h3>Luxury Design</h3>
-            <p>Clean, polished, high-end visual style that gives your brand instant credibility.</p>
-          </div>
-          <div class="card">
-            <h3>Conversion Focus</h3>
-            <p>Every section is designed to clearly explain your value and encourage action.</p>
-          </div>
-          <div class="card">
-            <h3>Responsive Experience</h3>
-            <p>Your site will appear elegant and work smoothly across mobile, tablet, and desktop.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section id="services">
       <div class="container">
         <div class="section-head">
           <h2>What I do</h2>
-          <p>I create premium websites, landing pages, and business presentation experiences that help brands grow.</p>
+          <p>I create modern websites and digital brand presence solutions that help businesses look professional and attract more clients.</p>
         </div>
 
         <div class="feature-grid">
           <div class="card">
-            <h3>Business Websites</h3>
-            <p>Luxury websites for clinics, agencies, restaurants, startups, and service-based businesses.</p>
+            <h3>Business Website Design</h3>
+            <p>Professional websites for clinics, restaurants, service businesses, agencies, and local brands.</p>
           </div>
+
           <div class="card">
-            <h3>Landing Pages</h3>
-            <p>Conversion-focused sales pages built to attract leads and generate enquiries.</p>
+            <h3>Landing Page Design</h3>
+            <p>One-page sales pages designed to highlight your offer and generate more enquiries.</p>
           </div>
+
           <div class="card">
-            <h3>Brand Presence</h3>
-            <p>Professional digital presentation for businesses that want a more premium online identity.</p>
+            <h3>Portfolio Website</h3>
+            <p>Custom portfolio sites for professionals, freelancers, and creatives who want to present their work confidently.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section>
+    <section id="process">
       <div class="container">
         <div class="section-head">
           <h2>My process</h2>
-          <p>Simple, polished, and professional workflow from concept to launch.</p>
+          <p>Simple, professional workflow from idea to launch.</p>
         </div>
 
         <div class="process-grid">
           <div class="step">
             <div class="num">1</div>
             <h3>Discovery</h3>
-            <p>I learn your business, your audience, and your exact goals for the website.</p>
+            <p>I understand your business, audience, and goals before I design anything.</p>
           </div>
+
           <div class="step">
             <div class="num">2</div>
             <h3>Design</h3>
-            <p>I create a premium layout with clarity, trust, and strong brand positioning.</p>
+            <p>I create a clean and modern layout with trust-building elements and strong flow.</p>
           </div>
+
           <div class="step">
             <div class="num">3</div>
             <h3>Build</h3>
-            <p>I turn the design into a responsive, professional website that feels premium.</p>
+            <p>I turn the concept into a responsive website that works smoothly on all devices.</p>
           </div>
+
           <div class="step">
             <div class="num">4</div>
             <h3>Launch</h3>
-            <p>Your site is ready to impress clients and generate growth opportunities.</p>
+            <p>Your website is ready to represent your brand online and attract more clients.</p>
           </div>
         </div>
       </div>
@@ -599,48 +601,48 @@
     <section id="pricing">
       <div class="container">
         <div class="section-head">
-          <h2>Simple pricing</h2>
-          <p>Transparent service packages built for businesses and professionals who need a cleaner, stronger online presence.</p>
+          <h2>Pricing</h2>
+          <p>Affordable packages for businesses that want a professional online presence without overspending.</p>
         </div>
 
         <div class="pricing-grid">
           <div class="pricing-card">
             <div class="tag">Starter</div>
-            <h3>Landing Page</h3>
-            <div class="price">৳5,000 <small>/ project</small></div>
+            <h3>Starter Package</h3>
+            <div class="price">৳3,000 <small>/ project</small></div>
             <ul>
               <li>1-page website</li>
-              <li>Hero, services, contact</li>
+              <li>Modern design</li>
               <li>Responsive layout</li>
-              <li>Basic SEO</li>
+              <li>Contact section</li>
             </ul>
-            <a href="mailto:jhonsmith0080@gmail.com" class="btn btn-secondary">Order Now</a>
+            <a href="#contact" class="btn btn-secondary">Order Now</a>
           </div>
 
           <div class="pricing-card featured">
             <div class="tag">Most Popular</div>
-            <h3>Business Website</h3>
-            <div class="price">৳12,000 <small>/ project</small></div>
+            <h3>Business Package</h3>
+            <div class="price">৳6,000 <small>/ project</small></div>
             <ul>
-              <li>5–6 page website</li>
-              <li>About, services, portfolio</li>
-              <li>Luxury design layout</li>
-              <li>Mobile ready</li>
+              <li>3–4 page website</li>
+              <li>About + Services + Contact</li>
+              <li>Professional layout</li>
+              <li>Mobile friendly</li>
             </ul>
-            <a href="mailto:jhonsmith0080@gmail.com" class="btn btn-primary">Order Now</a>
+            <a href="#contact" class="btn btn-primary">Order Now</a>
           </div>
 
           <div class="pricing-card">
             <div class="tag">Premium</div>
-            <h3>Brand Presence</h3>
-            <div class="price">৳25,000 <small>/ project</small></div>
+            <h3>Premium Package</h3>
+            <div class="price">৳10,000 <small>/ project</small></div>
             <ul>
-              <li>Custom website structure</li>
-              <li>Brand-focused design</li>
-              <li>Lead-driven layout</li>
-              <li>Consultation included</li>
+              <li>5–6 page site</li>
+              <li>Portfolio + pricing + contact</li>
+              <li>Premium design feel</li>
+              <li>Lead-focused structure</li>
             </ul>
-            <a href="mailto:jhonsmith0080@gmail.com" class="btn btn-secondary">Order Now</a>
+            <a href="#contact" class="btn btn-secondary">Order Now</a>
           </div>
         </div>
       </div>
@@ -649,8 +651,8 @@
     <section id="portfolio">
       <div class="container">
         <div class="section-head">
-          <h2>Featured work</h2>
-          <p>Example concepts designed for businesses that want to look premium, clear, and highly professional.</p>
+          <h2>Project examples</h2>
+          <p>Examples of designs that help businesses look more professional and trustworthy online.</p>
         </div>
 
         <div class="project-grid">
@@ -658,34 +660,38 @@
             <div class="project-thumb"></div>
             <div class="project-body">
               <h3>Clinic Website</h3>
-              <p>Luxury healthcare landing page with trust-focused layout and elegant presentation.</p>
+              <p>Modern website for a healthcare service focused on trust, clarity, and appointments.</p>
               <div class="tags">
+                <span>Business</span>
                 <span>Healthcare</span>
-                <span>Premium</span>
               </div>
             </div>
           </article>
 
           <article class="project-card">
-            <div class="project-thumb" style="background:linear-gradient(145deg, rgba(138,169,255,0.26), rgba(126,240,209,0.12)), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;"></div>
+            <div class="project-thumb" style="background:
+              linear-gradient(145deg, rgba(29,78,216,0.24), rgba(96,165,250,0.12)),
+              url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;"></div>
             <div class="project-body">
               <h3>Agency Portfolio</h3>
-              <p>Minimal, premium portfolio for a service-driven agency looking to attract clients.</p>
+              <p>Premium and minimal portfolio layout for a digital service brand.</p>
               <div class="tags">
-                <span>Agency</span>
+                <span>Portfolio</span>
                 <span>Branding</span>
               </div>
             </div>
           </article>
 
           <article class="project-card">
-            <div class="project-thumb" style="background:linear-gradient(145deg, rgba(138,169,255,0.26), rgba(126,240,209,0.12)), url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;"></div>
+            <div class="project-thumb" style="background:
+              linear-gradient(145deg, rgba(29,78,216,0.24), rgba(96,165,250,0.12)),
+              url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;"></div>
             <div class="project-body">
               <h3>Startup Landing Page</h3>
-              <p>Luxury startup presentation page built to win trust and generate strong enquiries.</p>
+              <p>Clean, modern landing page designed to help a startup attract enquiries and leads.</p>
               <div class="tags">
+                <span>Landing page</span>
                 <span>Startup</span>
-                <span>Landing</span>
               </div>
             </div>
           </article>
@@ -693,32 +699,37 @@
       </div>
     </section>
 
-    <section class="cta-section" id="contact">
+    <section class="cta-section">
       <div class="container">
         <div class="cta-box">
           <div>
-            <h2>Let’s build your premium online presence.</h2>
-            <p>Need a modern website for your business or personal brand? Let’s talk.</p>
+            <h2>Need a modern website for your business?</h2>
+            <p>I help businesses build a cleaner and more professional online presence.</p>
           </div>
-          <a href="mailto:jhonsmith0080@gmail.com" class="btn btn-primary">Email Me</a>
+          <a href="#contact" class="btn btn-primary">Get a Quote</a>
         </div>
       </div>
     </section>
 
-    <section>
+    <section id="contact">
       <div class="container contact-grid">
         <div class="card">
-          <h3>Contact details</h3>
-          <p>Email: jhonsmith0080@gmail.com</p>
-          <p>Available for freelance web design, premium landing pages, and business website projects.</p>
+          <h3>Why work with me?</h3>
+          <p>
+            I design websites that look clean, modern, and trustworthy — helping businesses present themselves professionally and attract more clients online.
+          </p>
+          <br />
+          <p>
+            Services: Business website design, landing page design, portfolio website, website redesign, and digital presence setup.
+          </p>
         </div>
 
         <div class="contact-form">
-          <form action="mailto:jhonsmith0080@gmail.com" method="post" enctype="text/plain">
-            <input type="text" name="name" placeholder="Your name" required />
-            <input type="email" name="email" placeholder="Your email" required />
-            <textarea name="message" placeholder="Tell me about your project..." required></textarea>
-            <button type="submit" class="btn btn-primary" style="width:100%; margin-top:8px;">Send Message</button>
+          <form>
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea placeholder="Tell me about your project..." required></textarea>
+            <button type="submit" class="btn btn-primary" style="width:100%; margin-top:8px;">Send Request</button>
           </form>
         </div>
       </div>
@@ -726,7 +737,7 @@
   </main>
 
   <footer>
-    © 2026 Mawa — Premium Web Designer • Business Growth
+    © 2026 Mawa — Professional Web Designer
   </footer>
 </body>
 </html>
